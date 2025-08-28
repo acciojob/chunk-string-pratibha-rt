@@ -10,4 +10,4 @@ function chunkStr(str, size) {
 // Do not change the code below
 const str = prompt("Enter String.");
 const size = parseInt(prompt("Enter Chunk Size."), 10);
-alert(chunkStr(str, size).join("\n"));
+alert(JSON.stringify(chunkStr(str, size)));
