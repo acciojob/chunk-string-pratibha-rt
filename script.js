@@ -1,5 +1,6 @@
-function chunkStr(str, size) {
-    if (str === null) return []; // ✅ Handle null input
+function chunkString(str, size) {
+    if (str === null || str === "") return [];
+	if (size <= 0) return [];
 
     let chunks = [];
     for (let i = 0; i < str.length; i += size) {
@@ -12,4 +13,4 @@ function chunkStr(str, size) {
 // Do not change the code below
 const str = prompt("Enter String.");
 const size = parseInt(prompt("Enter Chunk Size."), 10);
-alert("[" + chunkStr(str, size).map(s => `"${s}"`).join(", ") + "]");
+alert("[" + chunkString(str, size).map(s => `"${s}"`).join(", ") + "]");
