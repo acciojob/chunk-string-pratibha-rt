@@ -1,12 +1,8 @@
 function chunkStr(str, size) {
-    
-	if (str === null) {
-		return []; 
-	}
+    if (str === null) return []; // ✅ Handle null input
 
-	let chunks = [];
-	
-    for (let i = 0; i < str.length; i = i + size) {
+    let chunks = [];
+    for (let i = 0; i < str.length; i += size) {
         let subStr = str.slice(i, i + size);
         chunks.push(subStr);
     }
