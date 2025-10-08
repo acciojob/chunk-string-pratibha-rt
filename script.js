@@ -1,6 +1,6 @@
 function chunkString(str, size) {
-    if (str === null || str === "") return [];
-	if (size <= 0) return [];
+    if (str === null || str === "") return []; // Handle null or empty input
+    if (size <= 0) return []; // Handle non-positive chunk size
 
     let chunks = [];
     for (let i = 0; i < str.length; i += size) {
